@@ -45,6 +45,7 @@ public class DragonManagement {
 		RyeDragon ryeDragon = new RyeDragon(player.getLocation(), craftWorld);
 		craftWorld.addEntity(ryeDragon, SpawnReason.CUSTOM);
 		LivingEntity dragon = (LivingEntity) ryeDragon.getEntity();
+        dragon.setCustomName(player.getName() + "'s Dragon Taxi");
 		
 		CheatProtectionHandler.exemptPlayerFromCheatChecks(player);	
 		dragon.setPassenger(player);
